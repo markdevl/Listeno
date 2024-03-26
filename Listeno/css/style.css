@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --a:0
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+
+}
+
+body {
+    background-color: black;
+    color: #fff;
+}
+
+.left {
+    width: 25vw;
+    padding: 2px;
+}
+
+.right {
+    width: 75vw;
+    margin: 10px 0px;
+    position: relative;
+}
+
+.close {
+    display: none;
+}
+
+.home ul li {
+
+    width: 14px;
+    list-style: none;
+    display: flex;
+    padding-top: 14px;
+    gap: 15px;
+}
+
+.heading {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    font-size: 13px;
+}
+
+/* .heading h2{
+    font-size: 20px;
+} */
+.library {
+    min-height: 80vh;
+    position: relative;
+}
+
+.heading img {
+    width: 20px;
+}
+
+.footer {
+    display: flex;
+    font-size: 10px;
+    gap: 10px;
+    position: absolute;
+    bottom: 0px;
+    padding: 5px;
+}
+
+.footer a {
+    color: gray;
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(34, 34, 34);
+    align-items: center;
+}
+
+.header button {
+    padding: 15px 20px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+}
+
+.header .signup_btn {
+    color: #fff;
+    background-color: black;
+}
+
+.spotifyPlaylists {
+    padding: 16px;
+}
+
+.spotifyPlaylists h1 {
+    padding: 16px;
+}
+
+.spotifyPlaylists .card {
+    width: 150px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #252525;
+    position: relative;
+    transition: all .9s;
+}
+
+.cardContainer {
+    /* margin: 10px; */
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    /* khali right wali portion scroll karega jab card badheng  */
+    max-height: 60vh;
+}
+
+
+.card img {
+    width: 100%;
+    object-fit: contain;
+    /* card ke ander rehga */
+}
+.card:hover{
+    background-color: rgb(46, 45, 45);
+    transition: all .9s;
+    --a:1;
+}
+
+.cardContainer .card h2 {
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.cardContainer .card p {
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.cardContainer .card .play {
+    width: 28px;
+    height: 28px;
+    background-color: #1fdf64;
+    border-radius: 50%;
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 88px;
+    right: 17px;
+    opacity: var(--a);
+    transition: all 1s ease-out;
+}
+
+.playbar {
+    width: 71vw;
+    min-height: 40px;
+    position: fixed;
+    bottom: 30px;
+    background-color: rgb(78, 72, 72);
+    padding: 6px;
+    border-radius: 10px;
+    /* filter: invert(1); */
+}
+
+
+
+.playbar .songButtons {
+    margin-bottom: 7px;
+}
+
+.playbar .songButtons img {
+    background-color: #252525;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 5px;
+
+
+}
+
+.hamburger {
+    display: none;
+}
+
+.hamburgerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+
+}
+
+.timeVol {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.volume {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    cursor: pointer;
+}
+
+.songTime {
+    font-size: 12px;
+}
+
+input[type="range"] {
+    width: 3rem;
+    cursor: pointer;
+}
+
+.library .songList {
+    height: 544px;
+    overflow: auto;
+    margin-bottom: 34px;
+}
+
+.library .songList ul {
+    list-style: none;
+    padding: 0 10px;
+}
+
+.playbar .aboveBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+
+}
+
+.playbar .aboveBar .songInfo,
+.songTime {
+    padding: 5px;
+}
+
+.library .songList ul li {
+    list-style-type: decimal;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+    padding: 15px;
+    border: 1px solid white;
+    margin: 12px;
+    font-size: 12px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.library .songList ul li .info {
+    font-size: 11px;
+    width: 344px;
+
+}
+
+.info div {
+    word-break: break-all;
+}
+
+.playbar .seekBar {
+    height: 6px;
+    width: 98%;
+    background-color: #fff;
+    position: absolute;
+    bottom: 6px;
+    border-radius: 10px;
+    /* margin-bottom: 3px; */
+    cursor: pointer;
+
+
+}
+
+.circle {
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 13px;
+    position: relative;
+    bottom: 6px;
+    left: 0%;
+    transition: left 0.5s;
+    /* jab circle position change karage tab smoth li jayega */
+}
+
+
+
+
+
+@media (max-width: 999px) {
+
+    .left {
+        position: absolute;
+        left: -130%;
+        /* 0 karange to ye ajayega right ke uper kyuki right width 100% hai */
+        transition: all .3s;
+        z-index: 1;
+        width: 350px;
+        background-color: black;
+    }
+
+    .close {
+        width: 30px;
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .right {
+        width: 99.5vw;
+        margin: 0px;
+    }
+
+    .playbar {
+        width: 89vw;
+        padding: 3px;
+        bottom: 15px;
+    }
+
+    .songInfo,
+    .songTime {
+        width: auto;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .aboveBar {
+        font-size: 15px;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .cardContainer {
+        justify-content: center;
+        margin: 0;
+        max-height: 48vh;
+    }
+
+    .spotifyPlaylists .card {
+        width: 70vw;
+    }
+
+    .playbar .songButtons img {
+        padding: 10px;
+    }
+
+    .spotifyPlaylists h1 {
+        margin-left: 25px;
+    }
+
+    .timeVol {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 5px;
+    }
+}
